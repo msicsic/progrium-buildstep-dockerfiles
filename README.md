@@ -13,7 +13,7 @@ Buildpacks should generally just work, but many of them make assumptions about t
 
  * [Ruby](https://github.com/heroku/heroku-buildpack-ruby)
  * [Node.js](https://github.com/heroku/heroku-buildpack-nodejs)
- * [Java](https://github.com/heroku/heroku-buildpack-java)
+ * [Java](https://github.com/msicsic/heroku-buildpack-java)
  * [Play!](https://github.com/heroku/heroku-buildpack-play)
  * [Python](https://github.com/heroku/heroku-buildpack-python)
  * [PHP](https://github.com/heroku/heroku-buildpack-php.git)
