@@ -1,6 +1,8 @@
 FROM ubuntu:14.04
 MAINTAINER progrium "msicsic@yahoo.com"
 
+RUN apt-get -qq update && apt-get -qqy upgrade
+
 RUN apt-get install -y python-software-properties && \
     apt-get install -y software-properties-common && \
     add-apt-repository ppa:webupd8team/java -y && \
