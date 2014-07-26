@@ -1,9 +1,3 @@
-# Notes
-
-To create a new version of the Buildstep Docker image, run the command : 
-
-    $ docker build -t msicsic/dokku-alt-buildstep:1.0 .
- 
 # Buildstep
 
 Heroku-style application builds using Docker and Buildpacks. Used by [Dokku](https://github.com/progrium/dokku) to make a mini-Heroku.
@@ -29,12 +23,12 @@ Buildpacks should generally just work, but many of them make assumptions about t
 
 ## Building Buildstep
 
-The buildstep script uses a buildstep base container that needs to be built. It must be created before
+The buildstep script uses a buildstep base container that needs to be built with Docker. It must be created before
 you can use the buildstep script. To create it, run:
 
-    $ make build
+    $ docker build -t msicsic/dokku-alt-buildstep:1.0 .
 
-This will create a container called `progrium/buildstep` that contains all supported buildpacks and the
+This will create a container called `msicsic/dokku-alt-buildstep:1.0` that contains all supported buildpacks and the
 builder script that will actually perform the build using the buildpacks.
 
 ## Building an App
