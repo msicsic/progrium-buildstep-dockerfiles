@@ -12,7 +12,7 @@ RUN apt-get install -y python-software-properties && \
     
 RUN echo "JAVA_HOME=/usr/lib/jvm/java-8-oracle" >> /etc/environment
 
-RUN apt-get install maven
+RUN apt-get install -y maven
 
 ADD ./stack/ /build
 RUN /build/prepare
