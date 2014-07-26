@@ -11,8 +11,8 @@ DEBIAN_FRONTEND=noninteractive
 #
 # SYSTEM PACKAGES
 #
-sed -i s/archive/old-releases/g /etc/apt/sources.list
-apt-get update
+#sed -i s/archive/old-releases/g /etc/apt/sources.list
+#apt-get update
 xargs apt-get install -y --force-yes < /build/packages.txt
 apt-get clean
 
@@ -46,10 +46,10 @@ do
 	[ "$BUILDPACK" == "" ] && continue
 	BUILDPACK_DIR="$(printf %02i $cnt)_$(basename $BUILDPACK)"
 	git clone --depth=1 $BUILDPACK $BUILDPACK_DIR
-    cnt=$((cnt+1))
-    if [ -e $BUILDPACK_DIR/Gemfile ]
-    then
-    	( cd $BUILDPACK_DIR && bundle install )
+	cnt=$((cnt+1))
+	if [ -e $BUILDPACK_DIR/Gemfile ]
+	then
+    		( cd $BUILDPACK_DIR && bundle install )
 	fi
 done < /build/buildpacks.txt
 
