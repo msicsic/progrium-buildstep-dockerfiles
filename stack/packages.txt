@@ -35,7 +35,7 @@ openssh-server
 postgresql
 postgresql-server-dev-9.3
 python-dev
-ruby1.9.1-dev
+ruby-dev
 ruby
 socat
 sqlite3
